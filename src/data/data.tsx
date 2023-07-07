@@ -2,10 +2,11 @@ import {
   AcademicCapIcon,
   ArrowDownTrayIcon,
   BuildingOffice2Icon,
-  CalendarIcon,
-  FlagIcon,
+  CloudIcon,
+  EnvelopeIcon,
   MapIcon,
   SparklesIcon,
+  
 } from '@heroicons/react/24/outline';
 
 import GithubIcon from '../components/Icon/GithubIcon';
@@ -13,19 +14,19 @@ import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';
-import heroImage from '../images/header-background.webp';
-import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
-import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
-import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
-import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
-import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
-import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
-import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
-import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
-import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
-import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
-import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
-import profilepic from '../images/profilepic.jpg';
+import heroImage from '../images/header-background.jpg';
+import porfolioImage1 from '../images/portfolio/cka.png';
+import porfolioImage2 from '../images/portfolio/aws-devops.png';
+import porfolioImage3 from '../images/portfolio/aws-developer.png';
+import porfolioImage4 from '../images/portfolio/azure-developer.png';
+import porfolioImage5 from '../images/portfolio/terraform.png';
+// import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
+// import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
+// import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
+// import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
+// import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
+// import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
+import profilepic from '../images/profilepic.png';
 import testimonialImage from '../images/testimonial.webp';
 import {
   About,
@@ -44,8 +45,8 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: 'Aaron Daberkow',
+  description: "Aaron Daberkow's personal website",
 };
 
 /**
@@ -69,18 +70,14 @@ export type SectionId = typeof SectionId[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `Aaron Daberkow`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
-      </p>
-      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        I'm a passionate <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently focused on{' '}
+        <strong className="text-stone-100">Platform Engineering</strong> and <strong className="text-stone-100">Cloud Architecture</strong>{' '}
+        with a strong interest in everything <strong className="text-stone-100">DevOps</strong>. I'm currently self
+        employed at <strong className="text-stone-100">Daberkow Development LLC</strong> and have been contracting with a wide variety of clients.
       </p>
     </>
   ),
@@ -104,16 +101,17 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: `I've been developing front and back end applications for over 10 years, including work 
+  for several Fortune 500 companies. Besides building scalable, performant, and secure cloud native 
+  applications, I also have a passion for developing continuous integration and delivery pipelines 
+  to facilitate the rapid and reliable deployment of features to customers.`,
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: 'Location', text: 'Topeka, KS', Icon: MapIcon},
+    {label: 'Employment', text: 'Daberkow Development LLC', Icon: BuildingOffice2Icon},
+    {label: 'Degree', text: 'Computer Engineering (Minor: Mathmatics)', Icon: AcademicCapIcon},
+    {label: 'Cloud Proficiency', text: 'AWS, Azure', Icon: CloudIcon},
+    {label: 'Contact', text: 'aarondabs@gmail.com', Icon: EnvelopeIcon},
+    {label: 'Interests', text: 'Woodworking, Landscaping', Icon: SparklesIcon},
   ],
 };
 
@@ -122,70 +120,70 @@ export const aboutData: About = {
  */
 export const skills: SkillGroup[] = [
   {
-    name: 'Spoken languages',
+    name: 'Cloud Platforms',
     skills: [
       {
-        name: 'English',
+        name: 'AWS',
         level: 10,
       },
       {
-        name: 'French',
-        level: 4,
-      },
-      {
-        name: 'Spanish',
-        level: 3,
-      },
-    ],
-  },
-  {
-    name: 'Frontend development',
-    skills: [
-      {
-        name: 'React',
-        level: 9,
-      },
-      {
-        name: 'Typescript',
-        level: 7,
-      },
-      {
-        name: 'GraphQL',
-        level: 6,
-      },
-    ],
-  },
-  {
-    name: 'Backend development',
-    skills: [
-      {
-        name: 'Node.js',
+        name: 'Azure',
         level: 8,
       },
       {
-        name: 'Rust',
-        level: 5,
-      },
-      {
-        name: 'Golang',
-        level: 4,
+        name: 'GCP',
+        level: 3,
       },
     ],
   },
   {
-    name: 'Mobile development',
+    name: 'Backend Development',
     skills: [
       {
-        name: 'React Native',
+        name: 'Java',
         level: 9,
       },
       {
-        name: 'Flutter',
-        level: 4,
+        name: 'Groovy',
+        level: 8,
       },
       {
-        name: 'Swift',
-        level: 3,
+        name: 'Golang',
+        level: 7,
+      },
+    ],
+  },
+  {
+    name: 'Frontend Development',
+    skills: [
+      {
+        name: 'React',
+        level: 8,
+      },
+      {
+        name: 'Typescript',
+        level: 9,
+      },
+      {
+        name: 'Angular',
+        level: 5,
+      },
+    ],
+  },
+  {
+    name: 'Infrastructure as Code',
+    skills: [
+      {
+        name: 'Terraform',
+        level: 10,
+      },
+      {
+        name: 'AWS CDK',
+        level: 9,
+      },
+      {
+        name: 'Azure ARM/Bicep',
+        level: 7,
       },
     ],
   },
@@ -196,71 +194,71 @@ export const skills: SkillGroup[] = [
  */
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Project title 1',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
+    title: 'Certified Kubernetes Administrator',
+    description: 'The Linux Foundation',
+    url: 'https://www.credly.com/badges/4ba2204d-ba61-429a-af9e-7e1d4a8410ba',
     image: porfolioImage1,
   },
   {
-    title: 'Project title 2',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
+    title: 'AWS Certified DevOps Engineer - Professional',
+    description: 'Amazon Web Services Training and Certification',
+    url: 'https://www.credly.com/badges/e9842bad-e6a0-4943-8d34-3fbf8faa6635',
     image: porfolioImage2,
   },
   {
-    title: 'Project title 3',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
+    title: 'AWS Certified Developer - Associate',
+    description: 'Amazon Web Services Training and Certification',
+    url: 'https://www.credly.com/badges/2713fd32-69df-4c7b-87d5-d11d414158de',
     image: porfolioImage3,
   },
   {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
+    title: 'Microsoft Certified: Azure Developer Associate',
+    description: 'Microsoft',
+    url: 'https://www.credly.com/badges/9404719f-3a61-4658-b4a0-bc12b833642b',
     image: porfolioImage4,
   },
   {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
+    title: 'HashiCorp Certified: Terraform Associate',
+    description: 'HashiCorp',
+    url: 'https://www.credly.com/badges/289139fd-f9fb-4e1a-9e30-01180ffb5816',
     image: porfolioImage5,
   },
-  {
-    title: 'Project title 6',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage6,
-  },
-  {
-    title: 'Project title 7',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage7,
-  },
-  {
-    title: 'Project title 8',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage8,
-  },
-  {
-    title: 'Project title 9',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage9,
-  },
-  {
-    title: 'Project title 10',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage10,
-  },
-  {
-    title: 'Project title 11',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage11,
-  },
+  // {
+  //   title: 'Project title 6',
+  //   description: 'Give a short description of your project here.',
+  //   url: 'https://timbaker.me',
+  //   image: porfolioImage6,
+  // },
+  // {
+  //   title: 'Project title 7',
+  //   description: 'Give a short description of your project here.',
+  //   url: 'https://timbaker.me',
+  //   image: porfolioImage7,
+  // },
+  // {
+  //   title: 'Project title 8',
+  //   description: 'Give a short description of your project here.',
+  //   url: 'https://timbaker.me',
+  //   image: porfolioImage8,
+  // },
+  // {
+  //   title: 'Project title 9',
+  //   description: 'Give a short description of your project here.',
+  //   url: 'https://timbaker.me',
+  //   image: porfolioImage9,
+  // },
+  // {
+  //   title: 'Project title 10',
+  //   description: 'Give a short description of your project here.',
+  //   url: 'https://timbaker.me',
+  //   image: porfolioImage10,
+  // },
+  // {
+  //   title: 'Project title 11',
+  //   description: 'Give a short description of your project here.',
+  //   url: 'https://timbaker.me',
+  //   image: porfolioImage11,
+  // },
 ];
 
 /**
@@ -268,39 +266,51 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
-  },
-  {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
-  },
+    date: 'May 2013',
+    location: 'Omaha, NE',
+    title: 'University of Nebraska',
+    content: <p>Computer Engineering (BS), Mathematics (Minor)</p>,
+  }
 ];
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    date: 'April 2023 - Present',
+    location: 'State of Nebraska DHHS',
+    title: 'Principle Platform Engineer',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        TODO
       </p>
     ),
   },
   {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
+    date: 'January 2020 - December 2022',
+    location: 'Mutual of Omaha (Enterprise Business Platform)',
+    title: 'Senior Cloud Architect',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        TODO
+      </p>
+    ),
+  },
+  {
+    date: 'August 2019 - January 2020',
+    location: 'Mutual of Omaha (Distribution Channel Management)',
+    title: 'Senior Cloud Architect',
+    content: (
+      <p>
+        TODO
+      </p>
+    ),
+  },
+  {
+    date: 'April 2019 - August 2019',
+    location: 'Optum (UnitedHealth Group)',
+    title: 'Senior Software Engineer',
+    content: (
+      <p>
+        TODO
       </p>
     ),
   },
