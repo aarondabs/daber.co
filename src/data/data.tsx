@@ -6,7 +6,6 @@ import {
   EnvelopeIcon,
   MapIcon,
   SparklesIcon,
-  
 } from '@heroicons/react/24/outline';
 
 import GithubIcon from '../components/Icon/GithubIcon';
@@ -14,27 +13,24 @@ import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';
+import devOpsHandbook from '../images/books/devops-handbook.jpg';
+import phoenixProject from '../images/books/phoenix-project.jpg';
+import awsDeveloperImg from '../images/certification/aws-developer.png';
+import awsDevOpsImg from '../images/certification/aws-devops.png';
+import azureDeveloperImg from '../images/certification/azure-developer.png';
+import azureDevOpsImg from '../images/certification/azure-devops.png';
+import ckaImg from '../images/certification/cka.png';
+import terraformImg from '../images/certification/terraform.png';
 import heroImage from '../images/header-background.jpg';
-import porfolioImage1 from '../images/portfolio/cka.png';
-import porfolioImage2 from '../images/portfolio/aws-devops.png';
-import porfolioImage3 from '../images/portfolio/aws-developer.png';
-import porfolioImage4 from '../images/portfolio/azure-developer.png';
-import porfolioImage5 from '../images/portfolio/terraform.png';
-// import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
-// import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
-// import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
-// import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
-// import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
-// import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
 import profilepic from '../images/profilepic.png';
 import testimonialImage from '../images/testimonial.webp';
 import {
   About,
+  CertificationItem,
   ContactSection,
   ContactType,
   Hero,
   HomepageMeta,
-  PortfolioItem,
   SkillGroup,
   Social,
   TestimonialSection,
@@ -56,7 +52,7 @@ export const SectionId = {
   Hero: 'hero',
   About: 'about',
   Contact: 'contact',
-  Portfolio: 'portfolio',
+  Certifications: 'certifications',
   Resume: 'resume',
   Skills: 'skills',
   Stats: 'stats',
@@ -88,11 +84,11 @@ export const heroData: Hero = {
       primary: true,
       Icon: ArrowDownTrayIcon,
     },
-    {
-      href: `#${SectionId.Contact}`,
-      text: 'Contact',
-      primary: false,
-    },
+    // {
+    //   href: `#${SectionId.Contact}`,
+    //   text: 'Contact',
+    //   primary: false,
+    // },
   ],
 };
 
@@ -128,7 +124,7 @@ export const skills: SkillGroup[] = [
       },
       {
         name: 'Azure',
-        level: 8,
+        level: 9,
       },
       {
         name: 'GCP',
@@ -190,75 +186,45 @@ export const skills: SkillGroup[] = [
 ];
 
 /**
- * Portfolio section
+ * Certifications section
  */
-export const portfolioItems: PortfolioItem[] = [
+export const certificationItems: CertificationItem[] = [
   {
     title: 'Certified Kubernetes Administrator',
     description: 'The Linux Foundation',
     url: 'https://www.credly.com/badges/4ba2204d-ba61-429a-af9e-7e1d4a8410ba',
-    image: porfolioImage1,
-  },
-  {
-    title: 'AWS Certified DevOps Engineer - Professional',
-    description: 'Amazon Web Services Training and Certification',
-    url: 'https://www.credly.com/badges/e9842bad-e6a0-4943-8d34-3fbf8faa6635',
-    image: porfolioImage2,
-  },
-  {
-    title: 'AWS Certified Developer - Associate',
-    description: 'Amazon Web Services Training and Certification',
-    url: 'https://www.credly.com/badges/2713fd32-69df-4c7b-87d5-d11d414158de',
-    image: porfolioImage3,
-  },
-  {
-    title: 'Microsoft Certified: Azure Developer Associate',
-    description: 'Microsoft',
-    url: 'https://www.credly.com/badges/9404719f-3a61-4658-b4a0-bc12b833642b',
-    image: porfolioImage4,
+    image: ckaImg,
   },
   {
     title: 'HashiCorp Certified: Terraform Associate',
     description: 'HashiCorp',
     url: 'https://www.credly.com/badges/289139fd-f9fb-4e1a-9e30-01180ffb5816',
-    image: porfolioImage5,
+    image: terraformImg,
   },
-  // {
-  //   title: 'Project title 6',
-  //   description: 'Give a short description of your project here.',
-  //   url: 'https://timbaker.me',
-  //   image: porfolioImage6,
-  // },
-  // {
-  //   title: 'Project title 7',
-  //   description: 'Give a short description of your project here.',
-  //   url: 'https://timbaker.me',
-  //   image: porfolioImage7,
-  // },
-  // {
-  //   title: 'Project title 8',
-  //   description: 'Give a short description of your project here.',
-  //   url: 'https://timbaker.me',
-  //   image: porfolioImage8,
-  // },
-  // {
-  //   title: 'Project title 9',
-  //   description: 'Give a short description of your project here.',
-  //   url: 'https://timbaker.me',
-  //   image: porfolioImage9,
-  // },
-  // {
-  //   title: 'Project title 10',
-  //   description: 'Give a short description of your project here.',
-  //   url: 'https://timbaker.me',
-  //   image: porfolioImage10,
-  // },
-  // {
-  //   title: 'Project title 11',
-  //   description: 'Give a short description of your project here.',
-  //   url: 'https://timbaker.me',
-  //   image: porfolioImage11,
-  // },
+  {
+    title: 'AWS Certified DevOps Engineer - Professional',
+    description: 'Amazon Web Services Training and Certification',
+    url: 'https://www.credly.com/badges/e9842bad-e6a0-4943-8d34-3fbf8faa6635',
+    image: awsDevOpsImg,
+  },
+  {
+    title: 'AWS Certified Developer - Associate',
+    description: 'Amazon Web Services Training and Certification',
+    url: 'https://www.credly.com/badges/2713fd32-69df-4c7b-87d5-d11d414158de',
+    image: awsDeveloperImg,
+  },
+  {
+    title: 'Microsoft Certified: Azure Developer Associate',
+    description: 'Microsoft',
+    url: 'https://www.credly.com/badges/9404719f-3a61-4658-b4a0-bc12b833642b',
+    image: azureDeveloperImg,
+  },
+  {
+    title: 'Microsoft Certified: DevOps Engineer Expert',
+    description: 'Microsoft',
+    url: 'https://learn.microsoft.com/en-us/users/aarondaberkow-1066/credentials/84ad6e9bf5bd9244',
+    image: azureDevOpsImg,
+  },
 ];
 
 /**
@@ -280,7 +246,7 @@ export const experience: TimelineItem[] = [
     title: 'Principle Platform Engineer',
     content: (
       <p>
-        TODO
+        Lead the development of a cloud native platform to support the State of Nebraska's benfits application process.
       </p>
     ),
   },
@@ -290,7 +256,10 @@ export const experience: TimelineItem[] = [
     title: 'Senior Cloud Architect',
     content: (
       <p>
-        TODO
+        Architected transition of admin systems to custom enterprise CDK framework.
+        Coordinated cross account migration of systems during departmental restructuring.
+        Filled Solution Lead role with responsibilities including assigning task priority, system architecture, and mentoring of other developers.
+
       </p>
     ),
   },
@@ -300,7 +269,8 @@ export const experience: TimelineItem[] = [
     title: 'Senior Cloud Architect',
     content: (
       <p>
-        TODO
+        Created the infrastructure and deployment pipeline to support the transformation of disability insurance compensation events between vendors.
+        Created CI/CD pipelines utilizing Jenkins with automated unit and integration tests.
       </p>
     ),
   },
@@ -310,7 +280,8 @@ export const experience: TimelineItem[] = [
     title: 'Senior Software Engineer',
     content: (
       <p>
-        TODO
+        Utilized Kafka to join raw topics into a real time canonical data model to be used throughout the enterprise.
+        Modeled complex healthcare platform data using the avro schema format, data joiners, and transformers.
       </p>
     ),
   },
@@ -323,19 +294,14 @@ export const testimonial: TestimonialSection = {
   imageSrc: testimonialImage,
   testimonials: [
     {
-      name: 'John Doe',
-      text: 'Use this as an opportunity to promote what it is like to work with you. High value testimonials include ones from current or past co-workers, managers, or from happy clients.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
+      name: 'The DevOps Handbook',
+      text: 'How to Create World-Class Agility, Reliability, & Security in Technology Organizations',
+      image: devOpsHandbook,
     },
     {
-      name: 'Jane Doe',
-      text: 'Here you should write some nice things that someone has said about you. Encourage them to be specific and include important details (notes about a project you were on together, impressive quality produced, etc).',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
-    },
-    {
-      name: 'Someone else',
-      text: 'Add several of these, and keep them as fresh as possible, but be sure to focus on quality testimonials with strong highlights of your skills/work ethic.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
+      name: 'The Phoenix Project',
+      text: 'A Novel about IT, DevOps, and Helping Your Business Win',
+      image: phoenixProject,
     },
   ],
 };

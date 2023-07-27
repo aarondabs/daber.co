@@ -30,6 +30,7 @@ const nextConfig = {
   images: {
     domains: ['images.unsplash.com', 'source.unsplash.com'],
   },
+  output: 'standalone',
 };
 
 module.exports = nextConfig;

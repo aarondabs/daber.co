@@ -74,9 +74,9 @@ export interface SkillGroup {
 }
 
 /**
- * Portfolio section
+ * Certifications section
  */
-export interface PortfolioItem {
+export interface CertificationItem {
   title: string;
   description: string;
   url: string;
